@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InGene Fitness – Distributor Catalogue 2025–26</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#c9a84c;--dark:#0d0d0d;--light:#f5f5f0;--white:#fff}
+body{background:#e8e5de;font-family:'Inter',sans-serif;display:flex;justify-content:center;padding:2rem 1rem;min-height:100vh}
+.wrap{background:var(--light);max-width:900px;width:100%;height:fit-content}
+@media(max-width:480px){body{padding:0}}
+.hdr{background:var(--dark);padding:2rem 2.5rem 1.5rem;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:-50px;top:-50px;width:240px;height:240px;border:1px solid rgba(201,168,76,0.12);border-radius:50%;pointer-events:none}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
+.brand{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:8px;color:#fff;line-height:1}
+.brand span{color:var(--gold)}
+.sub{font-size:10px;letter-spacing:5px;color:rgba(255,255,255,0.4);margin-top:6px;text-transform:uppercase}
+.hdr-meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:1.4rem;padding-top:1rem;border-top:0.5px solid rgba(255,255,255,0.1);position:relative;z-index:2}
+.hdr-tag{font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+.hdr-year{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase}
+.dist-corner,.dist-corner:link,.dist-corner:visited,.dist-corner:hover,.dist-corner:active,.dist-corner:focus{background:#c9a84c!important;color:#0d0d0d!important;border:1.5px solid #c9a84c!important;outline:none!important}
+.dist-corner{position:relative;z-index:2;margin-top:10px;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:3px;padding:11px 24px;cursor:pointer;text-transform:uppercase;will-change:transform,box-shadow;animation:floatBtn 3.5s ease-in-out infinite}
+@keyframes floatBtn{0%,100%{transform:translateY(0);box-shadow:0 2px 14px rgba(201,168,76,0.4)}50%{transform:translateY(-7px);box-shadow:0 12px 28px rgba(201,168,76,0.6)}}
+.dist-corner:hover{animation:none;transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,168,76,0.55)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;padding:1.1rem 2rem;background:var(--white);border-bottom:0.5px solid #e0ddd5}
+.fb{font-size:10px;font-family:'Bebas Neue',sans-serif;letter-spacing:2px;padding:5px 14px;border:1px solid #ccc;background:transparent;color:#555;cursor:pointer;transition:all 0.2s}
+.fb.on{background:var(--dark);color:var(--gold);border-color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1.4rem;padding:1.5rem 2rem 2rem;background:var(--light)}
+.card{background:var(--white);border:0.5px solid #e0ddd5;position:relative;cursor:pointer;overflow:hidden;opacity:0;animation:cardIn 0.5s ease forwards;will-change:transform;transform:translateZ(0);transition:transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94),box-shadow 0.3s cubic-bezier(0.25,0.46,0.45,0.94)}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.card:hover{transform:translateY(-5px) translateZ(0);box-shadow:0 12px 32px rgba(0,0,0,0.12)}
+.img-wrap{width:100%;aspect-ratio:1;overflow:hidden;position:relative;background:#f0ede5}
+.img-wrap img{width:100%;height:100%;object-fit:cover;will-change:transform,opacity;transform:translateZ(0);transition:transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.25s ease}
+.card:hover .img-wrap img{transform:scale(1.07) translateZ(0)}
+.img-shine{position:absolute;top:0;left:-130%;width:50%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,0.32) 50%,transparent 70%);will-change:left;transition:left 0.7s cubic-bezier(0.25,0.46,0.45,0.94);pointer-events:none}
+.card:hover .img-shine{left:155%}
+.reflect{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(255,255,255,0.22),transparent);pointer-events:none}
+.cat-badge{position:absolute;top:10px;left:10px;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--dark);color:var(--gold);padding:3px 8px;font-family:'Bebas Neue',sans-serif}
+.img-count{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.55);color:#fff;font-size:9px;letter-spacing:1px;padding:2px 7px;font-family:'Bebas Neue',sans-serif}
+.card-body{padding:0.75rem 1rem 1rem}
+.card-name{font-size:13px;font-weight:600;color:var(--dark);line-height:1.35;margin-bottom:5px}
+.card-price{font-family:'Bebas Neue',sans-serif;font-size:21px;color:var(--dark);letter-spacing:1px}
+.card-price sub{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#999;letter-spacing:0;vertical-align:middle}
+.view-btn{display:block;width:100%;padding:6px;background:transparent;color:#aaa;font-size:9px;letter-spacing:1px;text-transform:uppercase;font-family:'Bebas Neue',sans-serif;border:0.5px solid #e8e5de;cursor:pointer;text-align:center;margin-top:7px;transition:border-color 0.2s,color 0.2s}
+.view-btn:hover{border-color:#aaa;color:#555}
+.atb-slot{overflow:hidden;height:0}
+.atb-btn{display:block;width:100%;padding:9px;background:var(--dark);color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:2px;border:none;cursor:pointer;text-align:center;will-change:transform,opacity;transform:translateY(-110%);opacity:0}
+.atb-btn:hover{background:#222}
+.req-bar{display:none;background:var(--dark);padding:1rem 2rem;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid rgba(201,168,76,0.3);animation:slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.req-bar.show{display:flex}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.req-bar-text{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:1px}
+.req-bar-count{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);letter-spacing:2px}
+.req-btn{background:var(--gold);color:var(--dark);font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:3px;padding:10px 24px;border:none;cursor:pointer;white-space:nowrap}
+.req-btn:hover{opacity:0.88}
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:999;align-items:center;justify-content:center;padding:1rem}
+.lb.show{display:flex}
+.lb-inner{position:relative;max-width:580px;width:100%;animation:lbIn 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes lbIn{from{opacity:0;transform:scale(0.92)}to{opacity:1;transform:scale(1)}}
+.lb-img-box{position:relative;background:#111}
+.lb-img{width:100%;max-height:68vh;object-fit:contain;display:block;transition:opacity 0.22s ease}
+.lb-close{position:absolute;top:-16px;right:-16px;width:34px;height:34px;background:var(--gold);color:var(--dark);border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;z-index:10}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(201,168,76,0.15);border:1px solid var(--gold);color:var(--gold);width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;transition:background 0.18s}
+.lb-arrow:hover{background:var(--gold);color:var(--dark)}
+.lb-prev{left:-54px}.lb-next{right:-54px}
+.lb-counter{position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,0.6);color:rgba(255,255,255,0.7);font-size:11px;padding:3px 8px;font-family:'Bebas Neue',sans-serif}
+.lb-thumbs{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.lb-th{width:50px;height:50px;object-fit:cover;cursor:pointer;border:1.5px solid transparent;opacity:0.5;transition:opacity 0.2s,border-color 0.2s}
+.lb-th.on{border-color:var(--gold);opacity:1}
+.lb-info{color:#fff;text-align:center;margin-top:10px}
+.lb-iname{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--gold)}
+.lb-iprice{font-size:13px;color:rgba(255,255,255,0.45);margin-top:2px}
+.lb-atb{margin:12px auto 0;display:none;padding:10px 28px;background:var(--gold);color:var(--dark);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;border:none;cursor:pointer}
+.sz-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:1000;align-items:center;justify-content:center;padding:1rem}
+.sz-panel.show{display:flex}
+.sz-box{background:var(--white);max-width:400px;width:100%;padding:2rem;position:relative;animation:lbIn 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+.sz-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;cursor:pointer;color:#bbb}
+.sz-prod{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--dark);margin-bottom:4px}
+.sz-price{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--dark);letter-spacing:1px;margin-bottom:1.2rem}
+.sz-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#999;margin-bottom:8px}
+.sz-grid{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.4rem}
+.sz-btn{width:54px;height:44px;border:0.5px solid #ccc;background:transparent;font-size:12px;font-weight:600;cursor:pointer;color:var(--dark);transition:background 0.15s,border-color 0.15s,color 0.15s}
+.sz-btn.on{background:var(--dark);color:var(--gold);border-color:var(--dark)}
+.qty-sec{display:none;margin-bottom:1.4rem}
+.qty-sec.show{display:block}
+.qty-row{display:flex;align-items:center;gap:10px;margin-top:8px}
+.qty-b{width:32px;height:32px;border:0.5px solid #ccc;background:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--dark)}
+.qty-b:hover{background:var(--dark);color:#fff}
+.qty-n{width:50px;height:32px;text-align:center;border:none;border-top:0.5px solid #ccc;border-bottom:0.5px solid #ccc;font-size:14px;font-weight:600;outline:none;color:var(--dark)}
+.confirm-btn{display:none;width:100%;padding:11px;background:var(--dark);color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;border:none;cursor:pointer;margin-top:4px}
+.confirm-btn.show{display:block}
+.add-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--dark);color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;padding:10px 22px;z-index:3000;opacity:0;pointer-events:none;border:1px solid rgba(201,168,76,0.4);transition:opacity 0.25s,transform 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+.add-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.dist-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:2000;align-items:center;justify-content:center;padding:1rem}
+.dist-modal.show{display:flex}
+.dist-box{background:var(--dark);max-width:440px;width:100%;padding:2.5rem;position:relative;animation:lbIn 0.3s cubic-bezier(0.34,1.56,0.64,1);border:0.5px solid rgba(201,168,76,0.3)}
+.dist-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;cursor:pointer;color:#555}
+.dist-title{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:3px;color:var(--gold);margin-bottom:6px}
+.dist-sub{font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:1.6rem}
+.dist-contact{display:flex;flex-direction:column;gap:14px}
+.dc{font-size:12px;color:rgba(255,255,255,0.6)}
+.dc span{color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:1px;display:block;margin-top:3px}
+.dist-wa{display:block;width:100%;padding:12px;background:var(--gold);color:var(--dark);font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;border:none;cursor:pointer;margin-top:1.5rem;text-align:center}
+.footer{background:#111;padding:1.4rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft-brand{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;color:var(--gold)}
+.ft-r{text-align:right}
+.ft-phone{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:2px}
+.ft-s{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.4);margin-top:2px;text-transform:uppercase}
+
+@media(max-width:480px){
+  .hdr{padding:1.2rem 1rem 1rem}
+  .brand{font-size:32px;letter-spacing:4px}
+  .sub{font-size:8px;letter-spacing:3px}
+  .hdr-top{flex-direction:column;gap:10px;align-items:flex-start}
+  .dist-corner{font-size:10px;padding:9px 16px;letter-spacing:2px;align-self:flex-end;margin-top:0}
+  .hdr-meta{flex-direction:column;gap:4px;align-items:flex-start}
+  .hdr-tag{font-size:8px;letter-spacing:2px}
+  .hdr-year{display:none}
+  .filters{padding:0.7rem 0.8rem;gap:5px}
+  .fb{font-size:9px;padding:5px 10px;letter-spacing:1px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:0.75rem;padding:0.75rem}
+  .card-body{padding:0.5rem 0.6rem 0.7rem}
+  .card-name{font-size:11px;margin-bottom:3px}
+  .card-price{font-size:16px}
+  .card-price sub{font-size:9px}
+  .view-btn{font-size:8px;padding:5px;margin-top:5px}
+  .atb-btn{font-size:8px;padding:7px;letter-spacing:1px}
+  .req-bar{padding:0.8rem 1rem;flex-direction:column;gap:8px;align-items:flex-start}
+  .req-bar-count{font-size:15px}
+  .req-btn{font-size:10px;padding:8px 16px;letter-spacing:2px;width:100%;text-align:center}
+  .footer{padding:1rem;flex-direction:column;gap:0.6rem;align-items:flex-start}
+  .ft-phone{font-size:17px}
+  .ft-r{text-align:left}
+  .lb-prev{left:-8px}.lb-next{right:-8px}
+  .lb-arrow{width:28px;height:28px;font-size:16px}
+  .lb-inner{max-width:100%}
+  .sz-box{padding:1.2rem;margin:0 0.5rem}
+  .dist-box{padding:1.5rem;margin:0 0.5rem}
+  .cat-badge{font-size:7px;padding:2px 6px}
+  .img-count{font-size:8px;padding:2px 5px}
+}
+@media(min-width:481px) and (max-width:768px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:1rem;padding:1rem}
+  .hdr{padding:1.5rem 1.5rem 1.2rem}
+  .brand{font-size:40px;letter-spacing:5px}
+  .filters{padding:0.9rem 1.2rem}
+  .lb-prev{left:-20px}.lb-next{right:-20px}
+}
+@media(min-width:769px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-top">
+      <div><div class="brand">In<span>Gene</span></div><div class="sub">Rise Above All &nbsp;·&nbsp; Performance Fitness Apparel</div></div>
+      <button class="dist-corner" id="dist-btn" onclick="toggleDist()">Become a Distributor</button>
+    </div>
+    <div class="hdr-meta">
+      <div class="hdr-tag">Official Distributor Catalogue · 2025–26</div>
+      <div class="hdr-year">ingenefitness.com</div>
+    </div>
+  </div>
+  <div id="cat-view">
+    <div class="filters">
+      <button class="fb on" onclick="filter('all',this)">All</button>
+      <button class="fb" onclick="filter('Hoodie',this)">Hoodie</button>
+      <button class="fb" onclick="filter('RagTop',this)">RagTop</button>
+      <button class="fb" onclick="filter('T-Shirts',this)">T-Shirts</button>
+      <button class="fb" onclick="filter('Shorts',this)">Shorts</button>
+      <button class="fb" onclick="filter('Tank Top',this)">Tank Top</button>
+      <button class="fb" onclick="filter('Track',this)">Track</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="req-bar" id="req-bar">
+      <div><div class="req-bar-text">Items in your requirement</div><div class="req-bar-count" id="req-count">0 items</div></div>
+      <button class="req-btn" onclick="sendGmail()">Send Requirements</button>
+    </div>
+  </div>
+  <div class="footer">
+    <div><div class="ft-brand">InGene Fitness</div><div style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-top:4px">Modinagar, Ghaziabad · U.P. 201204</div></div>
+    <div class="ft-r"><div class="ft-phone">+91 93688 84791</div><div class="ft-s">Sales &amp; Distribution Enquiries</div><div class="ft-s" style="margin-top:2px">Info@ingenefitness.com</div></div>
+  </div>
+</div>
+<div class="lb" id="lb" onclick="lbBg(event)">
+  <div class="lb-inner">
+    <div class="lb-img-box">
+      <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+      <button class="lb-arrow lb-prev" onclick="lbNav(-1)">&#8249;</button>
+      <img class="lb-img" id="lb-img" src="" alt="">
+      <button class="lb-arrow lb-next" onclick="lbNav(1)">&#8250;</button>
+      <div class="lb-counter" id="lb-counter"></div>
+    </div>
+    <div class="lb-thumbs" id="lb-thumbs"></div>
+    <div class="lb-info">
+      <div class="lb-iname" id="lb-iname"></div>
+      <div class="lb-iprice" id="lb-iprice"></div>
+      <button class="lb-atb" id="lb-atb" onclick="closeLbSz()">+ Add to Bag</button>
+    </div>
+  </div>
+</div>
+<div class="sz-panel" id="sz-panel">
+  <div class="sz-box">
+    <button class="sz-close" onclick="closeSz()">&#x2715;</button>
+    <div class="sz-prod" id="sz-name"></div>
+    <div class="sz-price" id="sz-price"></div>
+    <div class="sz-label">Select Size</div>
+    <div class="sz-grid" id="sz-grid"></div>
+    <div class="qty-sec" id="qty-sec">
+      <div class="sz-label">Quantity</div>
+      <div class="qty-row">
+        <button class="qty-b" onclick="chQty(-1)">&#8722;</button>
+        <input class="qty-n" id="qty-n" value="1" readonly>
+        <button class="qty-b" onclick="chQty(1)">+</button>
+      </div>
+    </div>
+    <button class="confirm-btn" id="confirm-btn" onclick="confirmAdd()">Confirm &amp; Add to Bag</button>
+  </div>
+</div>
+<div class="add-toast" id="toast"></div>
+<div class="dist-modal" id="dist-modal" onclick="distBg(event)">
+  <div class="dist-box">
+    <button class="dist-close" onclick="closeDist()">&#x2715;</button>
+    <div class="dist-title">Become a Distributor</div>
+    <div class="dist-sub">Join the InGene Network · Exclusive Wholesale Pricing</div>
+    <div class="dist-contact">
+      <div class="dc">Phone / WhatsApp<span>+91 93688 84791</span></div>
+      <div class="dc">Email<span>work217717@gmail.com</span></div>
+      <div class="dc">Address<span>8/11, Street No. 6, Shivpuri, Niwari Road, Modinagar, Ghaziabad, U.P. 201204</span></div>
+    </div>
+    <button class="dist-wa" onclick="window.open('https://wa.me/919368884791?text=Hello%20InGene%2C%20I%20want%20to%20become%20a%20distributor.','_blank')">Contact on WhatsApp</button>
+  </div>
+</div>
+<script>
+const BASE='https://www.ingenefitness.com/wp-content/uploads/';
+const P=[{id:1,name:'InGene Hoodie \u2013 Black',cat:'Hoodie',price:2499,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Hoodie-2.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Hoodie-3.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Hoodie-4.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Hoodie-1.jpg']},{id:2,name:'InGene Genesis RagTop \u2013 Army Green',cat:'RagTop',price:1599,imgs:[BASE+'2024/06/Image-2.jpg',BASE+'2024/06/Image-6.jpg',BASE+'2024/06/Image-3.jpg',BASE+'2024/06/Image-5.jpg',BASE+'2024/06/Image-1.jpg']},{id:3,name:'InGene Genesis RagTop \u2013 Black',cat:'RagTop',price:1599,imgs:[BASE+'2025/05/9H0A5515-2.jpg',BASE+'2025/05/9H0A5522.jpg',BASE+'2025/05/9H0A5521-Copy.jpg',BASE+'2025/05/9H0A5535.jpg']},{id:4,name:'InGene Genesis RagTop \u2013 Blue',cat:'RagTop',price:1599,imgs:[BASE+'2024/06/9H0A5535-1.jpg',BASE+'2024/06/9H0A5537.jpg',BASE+'2024/06/9H0A5528.jpg']},{id:5,name:'InGene Old School Rag Top \u2013 Grey',cat:'RagTop',price:1999,imgs:[BASE+'2025/09/2.png',BASE+'2025/09/4.png',BASE+'2025/09/graymain.png',BASE+'2025/09/3.png',BASE+'2025/09/5.png']},{id:6,name:'InGene Old School RagTop \u2013 Black',cat:'RagTop',price:1999,imgs:[BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-3.jpg',BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-2.jpg',BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-4.jpg',BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-5.jpg',BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-6.jpg',BASE+'2019/07/Powerlifting-Rag-Top-Black-InGene-Gym-Short-Red-1.jpg']},{id:7,name:'InGene Old School RagTop \u2013 Maroon',cat:'RagTop',price:2199,imgs:[BASE+'2025/05/Maroon-10-1.jpg',BASE+'2025/05/Maroon-7.jpg',BASE+'2025/05/Maroon-10.jpg',BASE+'2025/05/Maroon-9-1.jpg']},{id:8,name:'InGene Old School RagTop \u2013 White',cat:'RagTop',price:1999,imgs:[BASE+'2019/04/White-13-2.jpg',BASE+'2019/04/White-7.jpg',BASE+'2019/04/White-5.jpg',BASE+'2019/04/White-18.jpg',BASE+'2019/04/White-8.jpg',BASE+'2019/04/White-17.jpg',BASE+'2019/04/White-22.jpg']},{id:9,name:'InGene Gym Short \u2013 Black',cat:'Shorts',price:1599,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Black-Shorts-1.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Black-Shorts-3.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Black-Shorts-2.jpg']},{id:10,name:'InGene Gym Short \u2013 Red',cat:'Shorts',price:1599,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Red-Shorts-3.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Red-Shorts-1.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Red-Shorts-2.jpg']},{id:11,name:'InGene Full Sleeves T-Shirt \u2013 Black',cat:'T-Shirts',price:1699,imgs:[BASE+'2019/07/InGene-Full-Sleeves-T-Shirt-InGene-Gym-Short-Black-4.jpg']},{id:12,name:'InGene Signature T-Shirt \u2013 Black',cat:'T-Shirts',price:2199,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-T-Shirt-1.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-T-Shirt-2.jpg']},{id:13,name:'InGene Signature T-Shirt \u2013 Red',cat:'T-Shirts',price:2199,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Amit-Kumar-Sharma-in-InGene-Fitness-Red-Signature-T-Shirt-4.jpg']},{id:14,name:'InGene DeepCut Tank \u2013 Black',cat:'Tank Top',price:1199,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Black-Signature-Black-Shorts-3.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Deep-Cut-T-Shirt-2.jpg']},{id:15,name:'InGene Genesis Basketball Tank \u2013 Pink',cat:'Tank Top',price:1149,imgs:[BASE+'2024/06/InGene-Genesis-Basketball-Tank-Top-Pink-1.jpg',BASE+'2024/06/InGene-Genesis-Basketball-Tank-Top-Pink-2.jpg']},{id:16,name:'InGene Genesis DeepCut Tank \u2013 Brown',cat:'Tank Top',price:1149,imgs:[BASE+'2024/06/InGene-Genesis-DeepCut-Tank-Top-Brown-2.jpg',BASE+'2024/06/InGene-Genesis-DeepCut-Tank-Top-Brown-1.jpg']},{id:17,name:'InGene Tank Top \u2013 Black',cat:'Tank Top',price:1099,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Tank-Top-1.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Nitin-Sharma-in-InGene-Fitness-Tank-Top-4.jpg']},{id:18,name:'InGene Track Pant \u2013 Black',cat:'Track',price:2199,imgs:[BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Amit-Kumar-Sharma-in-InGene-Fitness-Red-Signature-Track-1.jpg',BASE+'2019/07/Brand-Ambassador-Bodybuilding-Champion-Amit-Kumar-Sharma-in-InGene-Fitness-Red-Signature-Track-5.jpg']}];
+const fmt=n=>'Rs.'+n.toLocaleString('en-IN');
+let lbP=null,lbI=0,bag=[],szP=null,selSz='',distMode=false;
+function buildGrid(cat){const g=document.getElementById('grid');g.innerHTML='';const list=cat==='all'?P:P.filter(p=>p.cat===cat);list.forEach((p,i)=>{const c=document.createElement('div');c.className='card';c.style.animationDelay=(i*0.055)+'s';c.innerHTML='<div class="img-wrap"><img src="'+p.imgs[0]+'" alt="'+p.name+'" loading="lazy"><div class="reflect"></div><div class="img-shine"></div><div class="cat-badge">'+p.cat+'</div>'+(p.imgs.length>1?'<div class="img-count">'+p.imgs.length+' Photos</div>':'')+'</div><div class="card-body"><div class="card-name">'+p.name+'</div><div class="card-price">'+fmt(p.price)+'<sub> MRP</sub></div><div class="atb-slot"><button class="atb-btn" onclick="event.stopPropagation();openSz('+p.id+')">+ Add to Bag</button></div><button class="view-btn" onclick="event.stopPropagation();openLb('+p.id+',0)">View Images</button></div>';if(p.imgs.length>1){const img=c.querySelector('img');let tId=null;c.addEventListener('mouseenter',()=>{tId=setTimeout(()=>{img.style.opacity='0';setTimeout(()=>{img.src=p.imgs[1];img.style.opacity='1';},150);},80);});c.addEventListener('mouseleave',()=>{clearTimeout(tId);img.style.opacity='0';setTimeout(()=>{img.src=p.imgs[0];img.style.opacity='1';},150);});}c.addEventListener('click',()=>openLb(p.id,0));g.appendChild(c);});if(distMode)applyAtb(true,true);}
+function filter(cat,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');buildGrid(cat);}
+function applyAtb(on,instant){const cards=[...document.querySelectorAll('.card')];cards.forEach((card,i)=>{const slot=card.querySelector('.atb-slot'),btn=card.querySelector('.atb-btn');const d=instant?0:i*70;if(on){setTimeout(()=>{slot.style.transition='height 0.4s cubic-bezier(0.34,1.56,0.64,1)';slot.style.height='36px';btn.style.transition='transform 0.4s cubic-bezier(0.34,1.56,0.64,1) '+(d*0.2)+'ms,opacity 0.3s ease '+(d*0.2)+'ms';btn.style.transform='translateY(0)';btn.style.opacity='1';},d);}else{const rd=instant?0:(cards.length-1-i)*45;setTimeout(()=>{btn.style.transition='transform 0.28s ease '+(rd*0.15)+'ms,opacity 0.22s ease '+(rd*0.15)+'ms';btn.style.transform='translateY(-110%)';btn.style.opacity='0';setTimeout(()=>{slot.style.transition='height 0.28s ease';slot.style.height='0';},rd*0.15+180);},rd);}});}
+function toggleDist(){distMode=!distMode;const btn=document.getElementById('dist-btn');btn.textContent=distMode?'x Close Bag Mode':'Become a Distributor';if(distMode)applyAtb(true,false);else{applyAtb(false,false);setTimeout(()=>openDist(),1100);}}
+function openLb(pid,idx){lbP=P.find(p=>p.id===pid);lbI=idx;renderLb();document.getElementById('lb').classList.add('show');}
+function renderLb(){const p=lbP;const img=document.getElementById('lb-img');img.style.opacity='0';img.src=p.imgs[lbI];img.onload=function(){img.style.opacity='1';};document.getElementById('lb-counter').textContent=(lbI+1)+' / '+p.imgs.length;document.getElementById('lb-iname').textContent=p.name;document.getElementById('lb-iprice').textContent=fmt(p.price)+' MRP';document.getElementById('lb-atb').style.display=distMode?'block':'none';const tc=document.getElementById('lb-thumbs');tc.innerHTML='';p.imgs.forEach(function(s,i){const t=document.createElement('img');t.src=s;t.className='lb-th'+(i===lbI?' on':'');t.onclick=function(){lbI=i;renderLb();};tc.appendChild(t);});document.querySelector('.lb-prev').style.display=p.imgs.length>1?'flex':'none';document.querySelector('.lb-next').style.display=p.imgs.length>1?'flex':'none';}
+function lbNav(d){lbI=(lbI+d+lbP.imgs.length)%lbP.imgs.length;renderLb();}
+function closeLb(){document.getElementById('lb').classList.remove('show');}
+function lbBg(e){if(e.target===document.getElementById('lb'))closeLb();}
+function closeLbSz(){closeLb();openSz(lbP.id);}
+document.addEventListener('keydown',function(e){if(!document.getElementById('lb').classList.contains('show'))return;if(e.key==='ArrowRight')lbNav(1);if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='Escape')closeLb();});
+function openSz(pid){szP=P.find(p=>p.id===pid);selSz='';document.getElementById('sz-name').textContent=szP.name;document.getElementById('sz-price').textContent=fmt(szP.price)+' MRP';const sg=document.getElementById('sz-grid');sg.innerHTML='';['S','M','L','XL','2XL','3XL'].forEach(function(s){const b=document.createElement('button');b.className='sz-btn';b.textContent=s;b.onclick=function(){document.querySelectorAll('.sz-btn').forEach(x=>x.classList.remove('on'));b.classList.add('on');selSz=s;document.getElementById('qty-sec').classList.add('show');document.getElementById('confirm-btn').classList.add('show');};sg.appendChild(b);});document.getElementById('qty-sec').classList.remove('show');document.getElementById('confirm-btn').classList.remove('show');document.getElementById('qty-n').value=1;document.getElementById('sz-panel').classList.add('show');}
+function closeSz(){document.getElementById('sz-panel').classList.remove('show');szP=null;selSz='';}
+function chQty(d){const n=document.getElementById('qty-n');n.value=Math.max(1,parseInt(n.value)+d);}
+function confirmAdd(){const qty=parseInt(document.getElementById('qty-n').value);const ex=bag.find(b=>b.id===szP.id&&b.size===selSz);if(ex){ex.qty+=qty;}else{bag.push({id:szP.id,name:szP.name,price:szP.price,img:szP.imgs[0],cat:szP.cat,size:selSz,qty:qty});}closeSz();updateReqBar();showToast((szP.name.split('\u2013')[1]||szP.name).trim()+' ('+selSz+') added!');}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+function updateReqBar(){const bar=document.getElementById('req-bar');const total=bag.reduce((s,b)=>s+b.price*b.qty,0);const count=bag.reduce((s,b)=>s+b.qty,0);if(count>0){bar.classList.add('show');document.getElementById('req-count').textContent=count+' item'+(count>1?'s':'')+' \u00b7 '+fmt(total);}else bar.classList.remove('show');}
+function sendGmail(){if(!bag.length)return;const date=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});const total=bag.reduce((s,b)=>s+b.price*b.qty,0);const totalItems=bag.reduce((s,b)=>s+b.qty,0);let body='Dear InGene Fitness Team,\n\nI am interested in becoming an authorized distributor for InGene Fitness products. Please find my initial product requirement below:\n\n--------------------------------------------------\nDISTRIBUTOR REQUIREMENT - '+date+'\n--------------------------------------------------\n\n';const cats=[...new Set(bag.map(b=>b.cat))];cats.forEach(cat=>{body+='[ '+cat.toUpperCase()+' ]\n';bag.filter(b=>b.cat===cat).forEach(b=>{body+='  - '+b.name+'\n    Size: '+b.size+'   |   Qty: '+b.qty+' pcs   |   Unit: '+fmt(b.price)+'   |   Subtotal: '+fmt(b.price*b.qty)+'\n';});body+='\n';});body+='--------------------------------------------------\nTOTAL ITEMS  : '+totalItems+' pcs\nTOTAL AMOUNT : '+fmt(total)+'\n--------------------------------------------------\n\nKindly share wholesale pricing, MOQ, and distributor terms.\n\nWarm regards,\n[Your Name]\n[Company / City]\n[Phone]';window.open('https://mail.google.com/mail/?view=cm&to=work217717@gmail.com&su='+encodeURIComponent('I Want to Become an InGene Distributor - Product Requirement')+'&body='+encodeURIComponent(body),'_blank');}
+function openDist(){document.getElementById('dist-modal').classList.add('show');}
+function closeDist(){document.getElementById('dist-modal').classList.remove('show');}
+function distBg(e){if(e.target===document.getElementById('dist-modal'))closeDist();}
+buildGrid('all');
+</script>
+</body>
+</html>
